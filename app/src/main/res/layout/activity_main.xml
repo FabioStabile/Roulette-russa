@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/table"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/Player1"
+        android:layout_width="157dp"
+        android:layout_height="216dp"
+        android:src="@drawable/stickman"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97" />
+
+    <ImageView
+        android:id="@+id/Gun"
+        android:layout_width="147dp"
+        android:layout_height="208dp"
+        android:src="@drawable/revolverleft"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/table"
+        app:layout_constraintVertical_bias="0.753" />
+
+    <ImageView
+        android:id="@+id/BulletLeft"
+        android:layout_width="32dp"
+        android:layout_height="24dp"
+        android:src="@drawable/bulletleft"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.399"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/table"
+        app:layout_constraintVertical_bias="0.591" />
+
+    <ImageView
+        android:id="@+id/BulletRight"
+        android:layout_width="32dp"
+        android:layout_height="24dp"
+        android:src="@drawable/bulletright"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="@+id/table"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.591" />
+
+    <ImageView
+        android:id="@+id/Player2"
+        android:layout_width="157dp"
+        android:layout_height="216dp"
+        android:src="@drawable/stickman"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Player1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/brown"
+        android:text="shoot"
+        android:textColor="@color/white"
+        android:soundEffectsEnabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/table"
+        app:layout_constraintEnd_toEndOf="@+id/table"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/table"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <TextView
+        android:id="@+id/pointsPlayer1"
+        android:layout_width="78dp"
+        android:layout_height="34dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/Player1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/idPlayer1"
+        android:layout_width="78dp"
+        android:layout_height="34dp"
+        android:gravity="center"
+        android:text="Player 1"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/pointsPlayer1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/pointsPlayer2"
+        android:layout_width="78dp"
+        android:layout_height="34dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/Player2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/idPlayer2"
+        android:layout_width="78dp"
+        android:layout_height="34dp"
+        android:text="Player 2"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/pointsPlayer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/winner"
+        android:layout_width="386dp"
+        android:layout_height="73dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/table"
+        app:layout_constraintTop_toTopOf="@+id/table"
+        app:layout_constraintVertical_bias="0.099" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
